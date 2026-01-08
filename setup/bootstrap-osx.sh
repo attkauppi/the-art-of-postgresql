@@ -12,4 +12,4 @@ brew install \
   mycli \
   pgcli \
   pgloader \
-  postgres
+  postgresql

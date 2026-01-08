@@ -4,7 +4,9 @@ helm \
   --kube-context minikube \
   upgrade \
   --install \
-  --set service.type=NodePort \
-  --set postgresqlPassword=postgres \
   postgresql \
-  stable/postgresql
+  oci://registry-1.docker.io/bitnamicharts/postgresql \
+  -n default \
+  --set service.type=NodePort \
+  --set auth.postgresPassword=postgres
+  
